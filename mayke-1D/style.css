@@ -1,13 +1,40 @@
 body {
-background-color: #2b4e72;
+    background-color: #b0efff !important;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
 
+.login-container {
+    text-align: center;
+    padding: 20px;
+   
+    
 }
 
 .logintxt {
-color: #2b2823
+    color: #2b2823;
+    margin-bottom: 20px;
+}
+
+.lg input[type="text"],
+.lg input[type="password"],
+.lg input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
 
 }
 
-.lg {
-margin-bottom: 20px;
+.lg input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #a761e9;
+    color: white;
+   
+}
+
+.lg input[type="submit"]:hover {
+    background-color: #440042;
 }
