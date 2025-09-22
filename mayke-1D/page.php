@@ -29,7 +29,7 @@
             var email = document.getElementById("email").value;
             
             if (login == "admin" && password == "admin") {
-                location.href = "page.html";
+                location.href = "home.html";
             } else {
                 alert("Usuário ou senha incorretos");
             }
@@ -37,3 +37,4 @@
     </script>
 </body>
 </html>
+
