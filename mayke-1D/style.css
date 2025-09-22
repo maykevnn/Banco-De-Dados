@@ -1,6 +1,5 @@
 body {
     background-color: #b0efff !important;
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -9,32 +8,17 @@ body {
 .login-container {
     text-align: center;
     padding: 20px;
-   
-    
 }
 
 .logintxt {
-    color: #2b2823;
+    color: #141414;
     margin-bottom: 20px;
 }
 
-.lg input[type="text"],
-.lg input[type="password"],
-.lg input[type="email"] {
+.lg input {
     width: 100%;
     padding: 10px;
-    margin: 5px 0;
-
-}
-
-.lg input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #a761e9;
+    background-color: #383838;
     color: white;
-   
-}
-
-.lg input[type="submit"]:hover {
-    background-color: #440042;
+    border-radius: 5px;
 }

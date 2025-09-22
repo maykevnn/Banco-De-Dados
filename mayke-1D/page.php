@@ -9,10 +9,10 @@
 <body>
     <div class="login-container">
         <div class="logintxt">
-            <h4>Login</h4>
+            <h4>LOGIN</h4>
             <p><h3>Cadastro</h3></p>
         </div>
-        <form onsubmit="logar(); return false;">
+        <form>
             <div class="lg">
                 <input type="text" placeholder="Login" id="login">
                 <p><input type="password" placeholder="Senha" id="senha"></p>
@@ -21,20 +21,5 @@
             </div>
         </form>
     </div>
-
-    <script>
-        function logar() {
-            var login = document.getElementById("login").value;
-            var password = document.getElementById("senha").value;
-            var email = document.getElementById("email").value;
-            
-            if (login == "admin" && password == "admin") {
-                location.href = "home.html";
-            } else {
-                alert("Usuário ou senha incorretos");
-            }
-        }
-    </script>
 </body>
 </html>
-
