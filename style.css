@@ -1,0 +1,24 @@
+body {
+    background-color: #19aacf !important;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.login-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.logintxt {
+    color: #141414;
+    margin-bottom: 20px;
+}
+
+.lg input {
+    width: 100%;
+    padding: 10px;
+    background-color: #383838;
+    color: white;
+    border-radius: 5px;
+}
