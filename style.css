@@ -1,5 +1,5 @@
 body {
-    background-color: #19aacf !important;
+    background-color: #bef2ff !important;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -21,4 +21,13 @@ body {
     background-color: #383838;
     color: white;
     border-radius: 5px;
+}
+
+.header{
+    text-align: center;
+
+}
+
+#formulario_mural{
+    color: rgb(228, 228, 255);
 }

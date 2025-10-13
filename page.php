@@ -9,7 +9,7 @@
 <body>
     <div class="login-container">
         <div class="logintxt">
-            <h4>LOGIN</h4>
+            <h4>Login</h4>
             <p><h3>Cadastro</h3></p>
         </div>
         <form>

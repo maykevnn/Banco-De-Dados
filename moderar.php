@@ -1,7 +1,6 @@
 <?php
 include "conexao.php";
 
-// Atualizar recado
 if(isset($_POST['atualiza'])){
     $idatualiza = intval($_POST['id']);
     $nome       = mysqli_real_escape_string($conexao, $_POST['nome']);
@@ -14,7 +13,6 @@ if(isset($_POST['atualiza'])){
     exit;
 }
 
-// Excluir recado
 if(isset($_GET['acao']) && $_GET['acao'] == 'excluir'){
     $id = intval($_GET['id']);
     mysqli_query($conexao, "DELETE FROM tabela WHERE id=$id") or die("Erro ao deletar: " . mysqli_error($conexao));
@@ -22,7 +20,6 @@ if(isset($_GET['acao']) && $_GET['acao'] == 'excluir'){
     exit;
 }
 
-// Editar recado
 $editar_id = isset($_GET['acao']) && $_GET['acao'] == 'editar' ? intval($_GET['id']) : 0;
 $recado_editar = null;
 if($editar_id){
@@ -54,7 +51,7 @@ if($editar_id){
     <label>Mensagem:</label>
     <textarea name="msg"><?php echo htmlspecialchars($recado_editar['mensagem']); ?></textarea><br/>
     <input type="hidden" name="id" value="<?php echo $recado_editar['id']; ?>"/>
-    <input type="submit" name="atualiza" value="Modificar Recado" class="btn"/>
+    <input type="submit" name="atualiza" value="Editar Recado" class="btn"/>
 </form>
 </div>
 <?php endif; ?>
@@ -62,13 +59,13 @@ if($editar_id){
 <?php
 $seleciona = mysqli_query($conexao, "SELECT * FROM tabela ORDER BY id DESC");
 if(mysqli_num_rows($seleciona) <= 0){
-    echo "<p>Nenhum pedido no mural!</p>";
+    echo "<p>Nenhum pedido no mural</p>";
 }else{
     while($res = mysqli_fetch_assoc($seleciona)){
         echo '<ul class="tabela">';
         echo '<li><strong>ID:</strong> ' . $res['id'] . ' | 
-              <a href="moderar.php?acao=excluir&id=' . $res['id'] . '">Remover</a> | 
-              <a href="moderar.php?acao=editar&id=' . $res['id'] . '">Modificar</a></li>';
+              <a href="moderar.php?acao=excluir&id=' . $res['id'] . '" class="excluir">Excluir</a> | 
+              <a href="moderar.php?acao=editar&id=' . $res['id'] . '"  class="editar">Editar</a></li>';
         echo '<li><strong>Nome:</strong> ' . htmlspecialchars($res['nome']) . '</li>';
         echo '<li><strong>Email:</strong> ' . htmlspecialchars($res['email']) . '</li>';
         echo '<li><strong>Mensagem:</strong> ' . nl2br(htmlspecialchars($res['mensagem'])) . '</li>';

@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(24, 24, 24);
+
+}
+
+#header {
+    text-align: center;
+    color: rgb(225, 225, 225);
+
+}
+
+#formulario_mural{
+    text-align: center ;
+    color: aliceblue;
+}
+
+.tabela{
+    color: white;
+}
