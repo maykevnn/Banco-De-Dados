@@ -1,5 +1,5 @@
 body {
-    background-color: #bef2ff !important;
+    background-color: #bee9ff !important;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -19,15 +19,27 @@ body {
     width: 100%;
     padding: 10px;
     background-color: #383838;
-    color: white;
+    color: rgb(241, 241, 241);
     border-radius: 5px;
 }
 
-.header{
+#header{
     text-align: center;
+    color: rgb(34, 34, 34);
+}
+
+.editar{
+    color: green;
 
 }
 
-#formulario_mural{
-    color: rgb(228, 228, 255);
+.excluir{
+    color: red;
+}
+
+#formulario_muraal{ 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: rgb(50, 50, 50);
 }

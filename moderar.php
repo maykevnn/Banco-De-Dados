@@ -42,7 +42,7 @@ if($editar_id){
 </div>
 
 <?php if($recado_editar): ?>
-<div id="formulario_mural">
+<div id="formulario_muraal">
 <form method="post">
     <label>Nome:</label>
     <input type="text" name="nome" value="<?php echo htmlspecialchars($recado_editar['nome']); ?>"/><br/>
