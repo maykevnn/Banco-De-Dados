@@ -1,21 +1,157 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(216, 247, 255);
-
-}
-
-#header {
-    text-align: center;
-    color: rgb(28, 28, 28);
-
-}
-
-#formulario_mural{ 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    color: #333;
+    padding: 20px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;    
-    color: rgb(50, 50, 50);
 }
 
-.tabela{
-    color: rgb(30, 30, 30);
+#main {
+    background-color: #fff;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+header h1 {
+    text-align: center;
+    color: #6a1b9a;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+#formulario_mural form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#formulario_mural label {
+    font-weight: 600;
+    color: #6a1b9a;
+    margin-bottom: 5px;
+}
+
+#formulario_mural input[type="text"],
+#formulario_mural input[type="email"],
+#formulario_mural textarea {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#formulario_mural input[type="text"]:focus,
+#formulario_mural input[type="email"]:focus,
+#formulario_mural textarea:focus {
+    outline: none;
+    border-color: #6a1b9a;
+    box-shadow: 0 0 8px rgba(106, 27, 154, 0.5);
+}
+
+#formulario_mural textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.btn {
+    background-color: #6a1b9a;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.btn:hover {
+    background-color: #8e44ad;
+}
+
+/* Área do mural */
+
+#mural_de_pedidos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pedido {
+    border-left: 5px solid #6a1b9a;
+    background: #f9f7fb;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(106, 27, 154, 0.1);
+}
+
+.pedido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.pedido-header h2 {
+    color: #6a1b9a;
+    font-size: 1.3rem;
+}
+
+.pedido-header .email {
+    font-size: 0.85rem;
+    color: #777;
+    font-style: italic;
+}
+
+.mensagem {
+    font-size: 1rem;
+    color: #444;
+    white-space: pre-wrap;
+    line-height: 1.4;
+}
+
+.id {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: #aaa;
+    text-align: right;
+}
+
+/* Mensagem quando não tem pedidos */
+.nenhum-pedido {
+    text-align: center;
+    font-style: italic;
+    color: #999;
+    padding: 20px;
+    background: #f0e6f7;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #6a1b9a;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
 }

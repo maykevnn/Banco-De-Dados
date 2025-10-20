@@ -1,7 +1,6 @@
 <?php
 include "conexao.php";
 
-
 if(isset($_POST['cadastra'])){
     $nome  = mysqli_real_escape_string($conexao, $_POST['nome']);
     $email = mysqli_real_escape_string($conexao, $_POST['email']);
@@ -40,39 +39,48 @@ $(document).ready(function() {
 </head>
 <body>
 <div id="main">
-<div id="geral">
-<div id="header">
-    <h1>Mural de pedidos</h1>
-</div>
+  <header>
+      <h1>Mural de Pedidos</h1>
+  </header>
 
-<div id="formulario_mural">
-<form id="mural" method="post">
-    <label>Nome:</label>
-    <input type="text" name="nome"/><br/>
-    <label>Email:</label>
-    <input type="text" name="email"/><br/>
-    <label>Mensagem:</label>
-    <textarea name="msg"></textarea><br/>
-    <input type="submit" value="Publicar no Mural" name="cadastra" class="btn"/>
-</form>
-</div>
+  <section id="formulario_mural">
+      <form id="mural" method="post" novalidate>
+          <label for="nome">Nome:</label>
+          <input type="text" name="nome" id="nome" placeholder="Seu nome"/>
 
-<?php
-$seleciona = mysqli_query($conexao, "SELECT * FROM tabela ORDER BY id DESC");
-while($res = mysqli_fetch_assoc($seleciona)){
-    echo '<ul class="tabela">';
-    echo '<li><strong>ID:</strong> ' . $res['id'] . '</li>';
-    echo '<li><strong>Nome:</strong> ' . htmlspecialchars($res['nome']) . '</li>';
-    echo '<li><strong>Email:</strong> ' . htmlspecialchars($res['email']) . '</li>';
-    echo '<li><strong>Mensagem:</strong> ' . nl2br(htmlspecialchars($res['mensagem'])) . '</li>';
-    echo '</ul>';
-}
-?>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" placeholder="Seu email"/>
 
-<div id="footer">
+          <label for="msg">Mensagem:</label>
+          <textarea name="msg" id="msg" placeholder="Sua mensagem"></textarea>
 
-</div>
-</div>
+          <input type="submit" value="Publicar no Mural" name="cadastra" class="btn"/>
+      </form>
+  </section>
+
+  <section id="mural_de_pedidos">
+  <?php
+  $seleciona = mysqli_query($conexao, "SELECT * FROM tabela ORDER BY id DESC");
+  if(mysqli_num_rows($seleciona) == 0){
+      echo '<p class="nenhum-pedido">Nenhum pedido ainda. Seja o primeiro a publicar!</p>';
+  } else {
+      while($res = mysqli_fetch_assoc($seleciona)){
+          echo '<article class="pedido">';
+          echo '<div class="pedido-header">';
+          echo '<h2>' . htmlspecialchars($res['nome']) . '</h2>';
+          echo '<span class="email">' . htmlspecialchars($res['email']) . '</span>';
+          echo '</div>';
+          echo '<p class="mensagem">' . nl2br(htmlspecialchars($res['mensagem'])) . '</p>';
+          echo '<small class="id">Pedido #' . $res['id'] . '</small>';
+          echo '</article>';
+      }
+  }
+  ?>
+  </section>
+
+  <footer>
+    <p>&copy; <?= date('Y'); ?> Mural de Pedidos</p>
+  </footer>
 </div>
 </body>
 </html>
