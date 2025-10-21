@@ -1,45 +1,141 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: #bee9ff !important;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
-
-.login-container {
-    text-align: center;
-    padding: 20px;
-}
-
-.logintxt {
+    background: linear-gradient(135deg, #f1f9ff, #807b80);
     color: #141414;
-    margin-bottom: 20px;
-}
-
-.lg input {
-    width: 100%;
-    padding: 10px;
-    background-color: #383838;
-    color: rgb(241, 241, 241);
-    border-radius: 5px;
-}
-
-#header{
-    text-align: center;
-    color: rgb(34, 34, 34);
-}
-
-.editar{
-    color: green;
-
-}
-
-.excluir{
-    color: red;
-}
-
-#formulario_muraal{ 
     display: flex;
     justify-content: center;
-    align-items: center; 
-    color: rgb(50, 50, 50);
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+#main {
+    width: 100%;
+    max-width: 700px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+}
+
+
+#geral {
+    width: 100%;
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+#header h1 {
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+#formulario_muraal {
+    display: flex;
+    color: #323232;
+    margin-bottom: 30px;
+    background-color: #e6f0ff;
+    padding: 20px 25px;
+    border-radius: 10px;
+}
+
+#formulario_muraal label {
+    margin-bottom: 8px;
+    display: block;
+    color: #141414;
+}
+
+#formulario_muraal input[type="text"],
+#formulario_muraal textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border-radius: 7px;
+    background-color: #f9fbff;
+    color: #333;
+    font-family: inherit;
+}
+
+#formulario_muraal input[type="text"]:focus,
+#formulario_muraal textarea:focus {
+    border-color: #214c78;
+    outline: none;
+}
+
+#formulario_muraal textarea {
+    min-height: 80px;
+}
+
+#formulario_muraal .btn {
+    width: 180px;
+    padding: 10px 0;
+    background-color: #3399ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+#formulario_muraal .btn:hover {
+    background-color: #1a73e8;
+}
+
+.tabela {
+    background-color: #f0f8ff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    color: #222;
+}
+
+.tabela li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.tabela li strong {
+    color: #3399ff;
+}
+
+.editar,
+.excluir {
+    margin-left: 10px;
+}
+
+.editar {
+    color: #2e7d32; 
+}
+
+.editar:hover {
+    color: #1b4d20;
+}
+
+.excluir {
+    color: #d32f2f; 
+}
+
+.excluir:hover {
+    color: #a12020;
+}
+
+
+p {
+    text-align: center;
+    color: #555;
+    margin-top: 40px;
+}
+
+#footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
 }

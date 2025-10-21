@@ -79,7 +79,6 @@ $(document).ready(function() {
   </section>
 
   <footer>
-    <p>&copy; <?= date('Y'); ?> Mural de Pedidos</p>
   </footer>
 </div>
 </body>
