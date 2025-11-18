@@ -39,7 +39,7 @@ if(isset($_POST['cadastra'])){
         }
     }
     if($imagem_url != ""){
-        $sql = "INSERT INTO produtos(nome, descricao, preco, imagem_url) VALUES ('$nome', '$descricao', $preco, '$imagem_url')";
+        $sql = "INSERT INTO produtos (nome, descricao, preco, imagem_url) VALUES ('$nome', '$descricao', $preco, '$imagem_url')";
         mysqli_query($conexao, $sql) or die("Erro ao inserir: " . mysqli_error($conexao));
     }
     header("Location: mural.php");
@@ -52,7 +52,7 @@ if(isset($_POST['cadastra'])){
 <head>
 <meta charset="utf-8"/>
 <title>Mural de Produtos</title>
-<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="stylemural.css"/>
 </head>
 <body>
 <div id="main">
