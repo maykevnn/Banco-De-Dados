@@ -1,0 +1,98 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* ===== FUNDO ===== */
+body {
+    background: linear-gradient(135deg, #6c63ff, #48a9fe);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== CONTAINER ===== */
+.login-container {
+    background: #ffffff;
+    width: 350px;
+    padding: 35px 30px;
+    border-radius: 18px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fade 0.6s ease-in-out;
+}
+
+/* ===== TÍTULOS ===== */
+.logintxt {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logintxt h4 {
+    font-size: 1.4rem;
+    color: #444;
+}
+
+.logintxt h3 {
+    font-size: 1.9rem;
+    color: #6c63ff;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+/* ===== INPUTS ===== */
+.lg input[type="text"],
+.lg input[type="password"],
+.lg input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #d1d1d1;
+    background: #fafafa;
+    transition: 0.2s;
+    font-size: 1rem;
+}
+
+.lg input[type="text"]:focus,
+.lg input[type="password"]:focus,
+.lg input[type="email"]:focus {
+    border-color: #6c63ff;
+    box-shadow: 0px 0px 4px rgba(108, 99, 255, 0.5);
+    outline: none;
+}
+
+/* ===== BOTÃO ===== */
+.lg input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 10px;
+    background: #6c63ff;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.lg input[type="submit"]:hover {
+    background: #544df3;
+    transform: translateY(-3px);
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

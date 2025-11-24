@@ -1,5 +1,6 @@
 <?php
-include "conexao.php";
+include "conexao.php"; 
+
 
 function deletarImagemCloudinary($public_id, $cloud_name, $api_key, $api_secret) {
     $timestamp = time();
@@ -38,9 +39,10 @@ if(isset($_GET['excluir'])) {
     }
 
     mysqli_query($conexao, "DELETE FROM produtos WHERE id = $id") or die("Erro ao excluir: " . mysqli_error($conexao));
-    header("Location: moderar.php");
+    header("Location: moderar.php"); 
     exit;
 }
+
 
 if(isset($_POST['editar'])) {
     $id = intval($_POST['id']);
@@ -54,8 +56,12 @@ if(isset($_POST['editar'])) {
     exit;
 }
 
+
+
+
 $editar_id = isset($_GET['editar']) ? intval($_GET['editar']) : 0;
 $produtos = mysqli_query($conexao, "SELECT * FROM produtos ORDER BY id DESC");
+
 
 ?>
 
@@ -83,7 +89,7 @@ $produtos = mysqli_query($conexao, "SELECT * FROM produtos ORDER BY id DESC");
                     <p><img src="<?= htmlspecialchars($res['imagem_url']) ?>" alt="<?= htmlspecialchars($res['nome']) ?>"></p>
 
                     <a href="moderar.php?excluir=<?= $res['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
-
+                
                     <?php if($editar_id == $res['id']): ?>
                         <form method="post" action="moderar.php">
                             <input type="hidden" name="id" value="<?= $res['id'] ?>">

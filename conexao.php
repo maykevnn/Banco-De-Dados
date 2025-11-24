@@ -1,8 +1,9 @@
 <?php
 
+
 $host    = "localhost";
 $usuario = "root";
-$senha   = " "; 
+$senha   = ""; 
 $banco   = "mayke_1d";     
 
 
@@ -14,7 +15,7 @@ if (!$conexao) {
 
 
 mysqli_set_charset($conexao, "utf8");
-
+    
 
 $cloud_name = "dgv2n07de"; 
 $api_key    = "129574969238313";

@@ -38,13 +38,16 @@ if(isset($_POST['cadastra'])){
             die("Erro no upload: " . print_r($result, true));
         }
     }
+
     if($imagem_url != ""){
         $sql = "INSERT INTO produtos (nome, descricao, preco, imagem_url) VALUES ('$nome', '$descricao', $preco, '$imagem_url')";
         mysqli_query($conexao, $sql) or die("Erro ao inserir: " . mysqli_error($conexao));
     }
+
     header("Location: mural.php");
     exit;
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -60,6 +63,7 @@ if(isset($_POST['cadastra'])){
         <div id="header">
             <h1>Mural de Produtos</h1>
         </div>
+
         <div id="formulario_mural">
             <form id="mural" method="post" enctype="multipart/form-data">
                 <label>Nome do produto:</label>
@@ -90,6 +94,8 @@ if(isset($_POST['cadastra'])){
             echo '</div>';
         }
 
+      
+
         ?>
         </div>
 
@@ -99,5 +105,4 @@ if(isset($_POST['cadastra'])){
     </div>
 </div>
 </body>
-
 </html>      

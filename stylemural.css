@@ -1,124 +1,97 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #5bbdff, #b746e3);
-    color: #333;
+    background: #e9ecef;
     padding: 20px;
-    display: flex;
-    justify-content: center;
 }
 
-#main {
-    background-color: #fff;
-    max-width: 700px;
-    width: 100%;
+#main #geral {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 25px;
     border-radius: 10px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
 
-header h1 {
+#header h1 {
     text-align: center;
-    color: #1f8fcb;
-    font-weight: 700;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+    color: #333;
 }
 
-#formulario_mural form {
-    display: flex;
-    flex-direction: column;
+#formulario_mural {
+    margin-bottom: 30px;
+}
+
+#formulario_mural form label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+#formulario_mural form input[type="text"],
+#formulario_mural form input[type="number"],
+#formulario_mural form input[type="file"],
+#formulario_mural form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+#formulario_mural textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.btn {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background: linear-gradient(15deg, #2f6793, #012d4f);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.produtos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
 }
 
-#formulario_mural label {
-    font-weight: 600;
-    color: #2292b5;
-    margin-bottom: 5px;
-}
 
-#formulario_mural input[type="text"],
-#formulario_mural input[type="email"],
-
-
-#formulario_mural input[type="text"]:focus,
-#formulario_mural input[type="email"]:focus,
-
-
-
-.btn {
-    background-color: #2a75d8;
-    padding: 12px;
-    color: white;
+.produto {
+    background: #f8f9fa;
+    padding: 15px;
+    border: 1px solid #ddd;
     border-radius: 8px;
 }
 
-.btn:hover {
-    background-color: #4478ad;
-}
-
-
-#mural_de_pedidos {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.pedido {
-    border-left: 5px solid #1e7ec3;
-    background: #f9f7fb;
-    padding: 15px 20px;
-    border-radius: 8px;
-}
-
-.pedido-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.produto p {
     margin-bottom: 8px;
 }
 
-.pedido-header h2 {
-    color: #1b419a;
-    font-size: 1.3rem;
-}
-
-.pedido-header .email {
-    font-size: 0.85rem;
-    color: #777;
-    font-style: italic;
-}
-
-
-
-.id {
-    display: block;
+.produto img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
     margin-top: 10px;
-    font-size: 0.75rem;
-    color: #aaa;
-    text-align: right;
-}
-
-
-.nenhum-pedido {
-    text-align: center;
-    color: #999;
-    padding: 20px;
-    background: #f0e6f7;
     border-radius: 8px;
 }
 
 
-footer {
+#footer {
     text-align: center;
-    color: #3d88c1;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
+    margin-top: 30px;
+    color: #555;
 }
